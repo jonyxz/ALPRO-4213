@@ -49,10 +49,10 @@ int main()
 
     //nomor 3
     int panjang;
-     cout << "masukan panjang isi array : ";
-     cin >> panjang;
-     int total = jmlharr(panjang);
-     cout << "jumlah nilai total : " << total << endl.,;
+    cout << "masukan panjang isi array : ";
+    cin >> panjang;
+    int total = jmlharr(panjang);
+    cout << "jumlah nilai total : " << total << endl;
 
     //nomor 4
     cout << "nilai rata-rata : " << rata2(total,panjang);
