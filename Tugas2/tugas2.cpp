@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-string ajg(bool a){
+string tf(bool a){
     if(a==true)
         return "true";
     else
@@ -39,7 +39,7 @@ int maxArray(int A[],int n){
 
 //fungsi minArray
 int minArray(int A[],int n){
-    int temp = 0;
+    int temp = 100;
     for(int i=0; i<n; i++){
         temp = min(temp,A[i]); 
     }return temp;
@@ -66,21 +66,21 @@ int minn(int a, int b){
 }
 
 //fungsi sumEven
-int sumEven(int arr[],int n){
+int sumEven(int A[],int n){
     int sum = 0;
     for (int i = 0; i < n; i++) {
-        if (arr[i] % 2 == 0) {
-            sum += arr[i];
+        if (A[i] % 2 == 0) {
+            sum += A[i];
         }
     }return sum;
 }
 
 //fungsi sumOdd
-int sumOdd(int arr[],int n){
+int sumOdd(int A[],int n){
     int sum = 0;
     for (int i = 0; i < n; i++) {
-        if (arr[i] % 2 != 0) {
-            sum += arr[i];
+        if (A[i] % 2 != 0) {
+            sum += A[i];
         }
     }return sum;
 }
@@ -95,9 +95,9 @@ void swapp(int a,int b){
 }
 
 //fungsi isFound
-bool isFound(int a[],int x,int n){
+bool isFound(int A[],int x,int n){
     for (int i = 0; i < n; i++) {
-        if (a[i] == x) {
+        if (A[i] == x) {
             return true;
         }
     }return false;
@@ -109,12 +109,12 @@ int main()
     //isEven
     cout << "Masukan bilangan genap: ";
     cin >> x;
-    cout << ajg(isEven(x)) << endl;
+    cout << tf(isEven(x)) << endl;
 
     //isOdd
     cout << "Masukan bilangan ganjil: ";
     cin >> x;
-    cout << isOdd(x) << endl;
+    cout << tf(isOdd(x)) << endl;
 
     int f;
     //isFactor
@@ -122,12 +122,53 @@ int main()
     cin >> x;
     cout << "Masukan Nilai f: ";
     cin >> f;
-    cout << "Hasil faktor dari " << x << " dan " << f << ": " << isFactor(x,f) << endl;
+    cout << "Hasil faktor dari " << x << " dan " << f << ": " << tf(isFactor(x,f)) << endl;
 
+    int n = 0;
+    int A[n]= {};
     //maxArray
+    cout << "Masukan panjang array: ";
+    cin >> n;
+    for(int i=0;i<n;i++){
+        cout << "masukan array: ";
+        cin >> A[i] ;
+    }
+    cout << endl << "max array: " << maxArray(A,n) << endl; 
+
+    //minArray
+    cout << "min array: " << minArray(A,n) << endl; 
+
+    //sumEven
+    cout << "sumEven : " << sumEven(A,n) << endl; 
+
+    //sumOdd
+    cout << "sumOdd: " << sumOdd(A,n) << endl; 
+
+    int a,b;
+    //max
+    cout << "Masukan nilai a: ";
+    cin >> a;
+    cout << "Masukan nilai b: ";
+    cin >> b;
+    cout << "Nilai max: " << maxx(a,b) << endl;
+
+    //min
+    cout << "Nilai min: " << minn(a,b) << endl;
+
+    //isFound
+    cout << "Masukkan panjang array: ";
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        cout << "Masukkan angka: ";
+        cin >> arr[i];
+    }
+    cout << "Masukkan angka yang ingin dicari: ";
+    cin >> x;
+    string cari = (isFound(arr,x,n)==1) ? "Angka ditemukan" : "Angka tidak ditemukan";
+    cout << cari << endl;
 
     //swap
-    int a,b;
     cout << "Masukan nilai a: ";
     cin >> a;
     cout << "Masukan nilai b: ";
