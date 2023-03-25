@@ -144,6 +144,12 @@ int main()
     //sumOdd
     cout << "sumOdd: " << sumOdd(A,n) << endl; 
 
+    //isFound
+    cout << "Masukkan angka yang ingin dicari: ";
+    cin >> x;
+    string cari = (isFound(A,x,n)==1) ? "Angka ditemukan" : "Angka tidak ditemukan";
+    cout << cari << endl;
+
     int a,b;
     //max
     cout << "Masukan nilai a: ";
@@ -154,19 +160,6 @@ int main()
 
     //min
     cout << "Nilai min: " << minn(a,b) << endl;
-
-    //isFound
-    cout << "Masukkan panjang array: ";
-    cin >> n;
-    int arr[n];
-    for (int i = 0; i < n; i++) {
-        cout << "Masukkan angka: ";
-        cin >> arr[i];
-    }
-    cout << "Masukkan angka yang ingin dicari: ";
-    cin >> x;
-    string cari = (isFound(arr,x,n)==1) ? "Angka ditemukan" : "Angka tidak ditemukan";
-    cout << cari << endl;
 
     //swap
     cout << "Masukan nilai a: ";
