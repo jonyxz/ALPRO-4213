@@ -1,12 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int kurangrec(int a, int b){
-    if (b==0)
-        return a;
-    else
-        return kurangrec(a-1,b-1);   
-}
+int kurangrec(int a, int b);
 
 int main(){
     int a,b;
@@ -16,4 +11,11 @@ int main(){
     cin >> b;
     cout << "hasil pengurangan bilangan "  << a << " dan " << b << " : " << kurangrec(a,b);
     return 0;
+}
+
+int kurangrec(int a, int b){
+    if (b==0)
+        return a;
+    else
+        return kurangrec(a-1,b-1);   
 }
